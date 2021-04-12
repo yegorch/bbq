@@ -8,6 +8,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'listen'
 
+gem 'twitter-bootstrap-rails'
+gem 'devise'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
