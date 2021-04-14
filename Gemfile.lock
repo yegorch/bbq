@@ -107,6 +107,8 @@ GEM
     orm_adapter (0.5.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.3.1)
@@ -142,6 +144,7 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    semantic_range (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -162,6 +165,11 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.9)
       rack (>= 2.0.9)
+    webpacker (5.2.1)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -179,6 +187,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
+  webpacker (~> 5.2.1)
 
 RUBY VERSION
    ruby 2.7.2p137

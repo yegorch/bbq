@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :set_current_user_event, except: [:show]
+
+  before_action :set_current_user, except: [:show]
 
   # GET /users/1
   def show
@@ -16,10 +17,9 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: I18n.t('controllers.users.updated')
     else
       render :edit
     end

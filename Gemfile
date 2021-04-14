@@ -10,6 +10,7 @@ gem 'listen'
 
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'webpacker', '~> 5.2.1'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
