@@ -12,6 +12,10 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'webpacker', '~> 5.2.1'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
