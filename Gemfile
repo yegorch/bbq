@@ -11,6 +11,7 @@ gem 'listen'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'webpacker', '~> 5.2.1'
+gem 'sprockets', '~>3.0'
 
 group :production do
   gem 'pg'
