@@ -6,6 +6,8 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 gem 'devise'
 gem 'webpacker', '~> 5.2.1'
+gem 'devise-i18n'
+gem 'russian'
 
 group :production do
   gem 'pg'
