@@ -18,13 +18,13 @@
         <div class="navbar-collapse">
           <ul class="nav me-auto">
             <% if user_signed_in? %>
-            <li><%= link_to 'Профиль', current_user %></li>
+            <li><%= link_to t('app.user'), current_user %></li>
             <%= link_to(destroy_user_session_path, {:class => "nav-item", :method => :delete}) do  %>
-            <span class="sidebar-normal"> Выйти </span>
+            <span class="sidebar-normal"> <%= t('app.exit') %> </span>
       <% end %>
             <% else %>
-            <li><%= link_to 'Войти', new_user_session_path %></li>
-            <li><%= link_to 'Зарегистрироваться',
+            <li><%= link_to t('app.login'), new_user_session_path %></li>
+            <li><%= link_to t('app.registrations'),
                     new_user_registration_path %></li>
            <% end %>
           </ul>
