@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @new_comment = @event.comments.build(params[:comment])
   end
 
   def new
@@ -23,7 +24,7 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.build(event_params)
-
+  
     if @event.save
       # Используем сообщение из файла локалей ru.yml
       # controllers -> events -> created

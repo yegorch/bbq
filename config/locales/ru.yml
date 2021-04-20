@@ -18,9 +18,19 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие :('
+    users:
+      updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
@@ -42,9 +52,27 @@ ru:
     created_event: 'Создать событие'
     delete: 'Удалить событие'
     confirm: 'Точно удалить событие?'
+    hello: 'Добрый день'
+    change_password: 'Сменить пароль'
+    forgot: 'Забыли пароль?'
+    edit: 'Изменить'
+    registration: 'Регистрация'
+    not_less: 'не менее '
+    symbols: 'символов'
+    enter: 'Вход'
+    confirm_password: 'Потвердить новый пароль'
 
   errors:
     one: 'В вашей форме %{count} ошибка'
     few: 'В вашей форме %{count} ошибки'
     many: В вашей форме '%{count} ошибок'
+
+  comments:
+    destroyed: 'Комментарий удален'
+    created: 'Ваш комментарий добавлен'
+    error: 'Ошибка с комментарием'    
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'  
 

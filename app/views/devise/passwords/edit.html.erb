@@ -1,4 +1,4 @@
-<h2>Change your password</h2>
+<h2><%= t('app.change_password') %></h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -13,12 +13,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <%= f.label :password_confirmation, t('app.confirm_password') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit t('app.enter') %>
   </div>
 <% end %>
 

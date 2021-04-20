@@ -1,4 +1,4 @@
-<h2>Вход</h2>
+<h2><%= t('app.enter') %></h2>
 <div class="form-group">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -19,7 +19,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit 'Вход', class: 'btn btn-primary' %>
+    <%= f.submit t('app.enter'), class: 'btn btn-primary' %>
   </div>
 </div>  
 <% end %>
