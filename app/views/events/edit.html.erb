@@ -1,11 +1,10 @@
 <h1><%= t('app.new_event') %></h1>
-
 <div class="row">
   <div class="col-md-6 buffer-top">
     <%= render 'form' %>
     <div class="buffer-both">
     <%= link_to t('app.delete'), event_path(@event), data: {confirm: t('app.confirm')}, class: 'btn btn-danger', 
      method: :delete %>
-  </div>
+    </div>
   </div>
 </div>
