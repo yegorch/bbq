@@ -1,6 +1,6 @@
 <div class="text-center">
   <h1><%= @user.name %></h1>
-  <%= image_pack_tag 'user.png', size: '200x200', alt: 'User' %>
+  <%= image_tag user_avatar(@user) %>
   <% if @user == current_user %>
     <p class="buffer-top"><%= link_to t('app.edit_link'),
       edit_user_path(@user), class: 'btn btn-default' %></p>

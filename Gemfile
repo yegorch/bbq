@@ -9,6 +9,9 @@ gem 'webpacker', '~> 5.2.1'
 gem 'devise-i18n'
 gem 'russian'
 
+gem 'carrierwave'
+gem 'rmagick'
+
 group :production do
   gem 'pg'
 end
