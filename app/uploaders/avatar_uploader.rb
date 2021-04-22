@@ -21,7 +21,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  # Process files as they are uploaded:
   process resize_to_fill: [400, 400]
   # process scale: [200, 300]
   #
@@ -40,8 +39,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
      %w(jpg jpeg gif png)
   end
 
-  # Override the filename of the uploaded files:
-  # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename
   #   "something.jpg" if original_filename
   # end
