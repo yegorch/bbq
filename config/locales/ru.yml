@@ -86,6 +86,12 @@ ru:
     sing_up_with: 'Войти в систему с'
     update: 'Обновить'
     send: 'Отправить'
+    upload: 'Загрузить'
+    add: 'Добавил'
+    subscribe: 'Подписаться'
+    i_go: 'Я пойду'
+    will_go: 'Пойдут'
+    caling: 'Зовет'
 
   errors:
     one: 'В вашей форме %{count} ошибка'
