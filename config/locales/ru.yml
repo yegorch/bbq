@@ -92,6 +92,7 @@ ru:
     i_go: 'Я пойду'
     will_go: 'Пойдут'
     caling: 'Зовет'
+    new_password: 'Новый пароль'
 
   errors:
     one: 'В вашей форме %{count} ошибка'
