@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_pack_tag "application", :media => "all" %>
-    <%= javascript_pack_tag "application" %>
+    <%= javascript_pack_tag "application" %> 
   </head>
   <body>
 
@@ -18,9 +18,7 @@
           <ul class="nav me-auto">
             <% if user_signed_in? %>
             <li><%= link_to t('app.user'), current_user %></li>
-            <%= link_to(destroy_user_session_path, {:class => "nav-item", :method => :delete}) do  %>
-            <span class="sidebar-normal"> <%= t('app.exit') %> </span>
-      <% end %>
+            <%= link_to t('app.exit'), destroy_user_session_path, method: :delete, class: "nav-item text-dark"%>
             <% else %>
             <li><%= link_to t('app.login'), new_user_session_path %></li>
             <li><%= link_to t('app.registrations'),
@@ -34,6 +32,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
+         <%= render 'partials/alerts' %>
           <%= yield %>
         </div>
         <div class="col-lg-3">
