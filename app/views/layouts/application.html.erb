@@ -18,7 +18,7 @@
           <ul class="nav me-auto">
             <% if user_signed_in? %>
             <li><%= link_to t('app.user'), current_user %></li>
-            <%= link_to t('app.exit'), destroy_user_session_path, method: :delete, class: "nav-item text-dark"%>
+            <%= link_to t('app.exit'), destroy_user_session_path, method: :delete, class: "nav-item text-dark" %>
             <% else %>
             <li><%= link_to t('app.login'), new_user_session_path %></li>
             <li><%= link_to t('app.registrations'), new_user_registration_path %></li>
