@@ -8,5 +8,6 @@ ActiveStorage.start()
 
 import 'bootstrap/dist/js/bootstrap'
 import '../styles/application'
+import '../packs/map'
 
 const images = require.context('../images', true)
