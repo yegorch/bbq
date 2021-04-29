@@ -1,28 +1,28 @@
-<h2><%= t('app.registration') %></h2>
+<h2><%= t('.sign_up') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-<%= render partial: 'partials/form_errors', locals: {model: @user} %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em><%= t('app.not_less') %>(<%= @minimum_password_length %> <%= t('app.symbols') %>)</em>
+    <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit t('app.registrations'), class: 'btn btn-primary' %>
+    <%= f.submit t('.sign_up') %>
   </div>
 <% end %>
 
