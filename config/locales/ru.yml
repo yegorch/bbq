@@ -1,7 +1,12 @@
 ru:
-  # Перевод моделей
   activerecord:
-    # Перевод названия моделей
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              event_owner: 'создал событие'
+
     models:
       user: 'Пользователь'
       event: 'Событие'
