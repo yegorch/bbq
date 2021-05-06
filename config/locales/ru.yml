@@ -2,6 +2,10 @@ ru:
   activerecord:
     errors:
       models:
+        photos:
+          attributes:
+            user: 
+              required: 'Пользователь'
         subscription:
           attributes:
             user:
@@ -98,6 +102,7 @@ ru:
     will_go: 'Пойдут'
     caling: 'Зовет'
     new_password: 'Новый пароль'
+    delete: 'Удалить фотографию?'
 
   errors:
     one: 'В вашей форме %{count} ошибка'
