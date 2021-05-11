@@ -105,6 +105,17 @@ Rails.application.configure do
   # Делать рассылку писем (при false приложение только имитирует отправку)
   config.action_mailer.perform_deliveries = true
 
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: 'in-v3.mailjet.com',
+    port: '587',
+    user_name: ENV["MAILJET_API_KEY"],
+    password: ENV["MAILJET_SECRET_KEY"],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write
