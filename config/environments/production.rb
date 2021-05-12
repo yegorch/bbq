@@ -24,23 +24,12 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
-
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
-
-  # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
-
-  # Mount Action Cable outside main process or domain.
-  # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -58,12 +47,6 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "bbq_production"
-
-  config.action_mailer.perform_caching = false
-
-  # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -94,25 +77,17 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Базовый URL сайта для правильных ссылок в письмах
-  # ПРОПИСЫВАЙТЕ свой!
   config.action_mailer.default_url_options = {host: 'appbbq.herokuapp.com'}
-  config.action_mailer.delivery_method = :mailjet
-
-  # Ошибки рассылки юзеру не показываем
   config.action_mailer.raise_delivery_errors = false
-
-  # Делать рассылку писем (при false приложение только имитирует отправку)
   config.action_mailer.perform_deliveries = true
-
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.smtp_settings = {
-    address: 'in-v3.mailjet.com',
-    port: '587',
-    user_name: ENV["MAILJET_API_KEY"],
-    password: ENV["MAILJET_SECRET_KEY"],
-    authentication: 'plain',
+  ActionMailer::Base.smtp_settings = {
+    address:              'in-v3.mailjet.com',
+    port:                 '587',
+    authentication:       'plain',
+    user_name:            ENV["MAILJET_API_KEY"],
+    password:             ENV["MAILJET_SECRET_KEY"],
     enable_starttls_auto: true
   }
 end
