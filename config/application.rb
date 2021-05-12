@@ -35,3 +35,10 @@ module Bbq
     config.generators.system_tests = nil
   end
 end
+
+module Mailjet
+  class Application < Rails::Application
+    config.generators.system_tests = nil
+    config.action_mailer.delivery_method = :mailjet
+  end
+end

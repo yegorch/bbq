@@ -8,6 +8,8 @@ gem 'devise'
 gem 'webpacker', '~> 5.2.1'
 gem 'devise-i18n'
 gem 'russian'
+gem 'mailjet'
+gem 'dotenv-rails'
 
 gem 'carrierwave'
 gem 'rmagick'

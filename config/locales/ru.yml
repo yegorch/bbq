@@ -10,6 +10,8 @@ ru:
           attributes:
             user:
               event_owner: 'создал событие'
+            user_email:
+              error_email: "уже используется на сайте, укажите другой email"  
 
     models:
       user: 'Пользователь'
