@@ -4176,10 +4176,10 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
-lightbox@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/lightbox/-/lightbox-0.5.0.tgz#cccd5ffab547cff8efd241f2dd9cc4acdf180b93"
-  integrity sha1-zM1f+rVHz/jv0kHy3ZzErN8YC5M=
+lightbox2@^2.11.3:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/lightbox2/-/lightbox2-2.11.3.tgz#057d9244badb0f0fd4603c25d739a19a85a71978"
+  integrity sha512-Q4v6il/OK9ttgEkAxSok/jrI/LUbqTrePFchqP2x/59qaDIZgJjEEc5Xf7peSMc/55Zo5PAgmX6EiN/BeEeUBQ==
 
 lines-and-columns@^1.1.6:
   version "1.1.6"
