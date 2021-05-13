@@ -1,0 +1,9 @@
+Загружена фотография 
+----------------------
+
+Автор <%= @photo.user.name %>
+
+<%= link_to image_tag(@photo.photo.thumb.url), @photo.photo.url %>
+----------------------
+<%= link_to @event.title, @event %>
+<%= @event.user.name %>
