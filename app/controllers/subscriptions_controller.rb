@@ -8,7 +8,6 @@ class SubscriptionsController < ApplicationController
   
     if @new_subscription.valid?
 
-      @new_subscription.save
       EventMailer.subscription(@event, @new_subscription).deliver_now
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else 
