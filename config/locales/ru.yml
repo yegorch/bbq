@@ -106,7 +106,14 @@ ru:
     will_go: 'Пойдут'
     caling: 'Зовет'
     new_password: 'Новый пароль'
-    delete: 'Удалить фотографию?'
+    delete_photo: 'Удалить фотографию?'
+    upload_photo: 'Загружена фотография'
+    author: 'Автор'
+    new_subscriptions: 'Новая подписка'
+    name: 'Имя'
+    email: 'Почта'
+    event: 'Событие'
+    date: 'Состоится'
 
   errors:
     one: 'В вашей форме %{count} ошибка'

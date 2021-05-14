@@ -1,7 +1,7 @@
 <div class="event-photo buffer-both">
-  <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
+  <% image_title = "#{ t('app.add') } #{render partial: 'users/user', object: photo.user}" %>
   
-  <% delete = link_to(fa_icon('trash'), event_photo_path(photo.event, photo), method: :delete, data: { confirm: t('app.delete')}) %>
+  <% delete = link_to(fa_icon('trash'), event_photo_path(photo.event, photo), method: :delete, data: { confirm: t('app.delete_photo')}) %>
   <% image_title << delete if current_user_can_edit?(photo) %>
 
   <%= link_to(image_tag(photo.photo.thumb.url), photo.photo.url,  data: { toggle: "lightbox", title: image_title, gallery: "photo-album" }) %>

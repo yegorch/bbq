@@ -1,7 +1,7 @@
-Загружена фотография 
+<%= t 'app.upload_photo' %>
 ----------------------
 
-Автор <%= @photo.user.name %>
+<%= t 'app.author' %> <%= @photo.user.name %>
 
 <%= link_to image_tag(@photo.photo.thumb.url), @photo.photo.url %>
 ----------------------
