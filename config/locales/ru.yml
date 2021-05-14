@@ -110,7 +110,7 @@ ru:
     upload_photo: 'Загружена фотография'
     author: 'Автор'
     new_subscriptions: 'Новая подписка'
-    name: 'Имя'
+    name_event: 'Имя'
     email: 'Почта'
     event: 'Событие'
     date: 'Состоится'
