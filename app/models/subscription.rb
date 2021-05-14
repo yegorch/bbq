@@ -5,9 +5,9 @@ class Subscription < ApplicationRecord
   with_options unless: -> { user.present? } do
     validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
     validates :user_email, uniqueness: {scope: :event_id}
-    validates :user, uniqueness: {scope: :event_id}
+    validates :user_email, uniqueness: {scope: :event_id}
     validates :user_name, presence: true
-    validate :email_busy
+    validate :email_is_not_registered
   end
   
   with_options if: -> { user.present? } do
@@ -37,7 +37,7 @@ class Subscription < ApplicationRecord
     errors.add(:user, :event_owner) if event.user == user
   end
 
-  def email_busy
+  def email_is_not_registered
     errors.add(:user_email, :error_email) if User.exists?(email: user_email)
   end
 end
