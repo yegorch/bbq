@@ -8,7 +8,6 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.photo.url != nil
-      
       @new_photo.save
       notify_subscribers(@event, @new_photo)
       redirect_to @event, notice: I18n.t('controllers.photos.created')
