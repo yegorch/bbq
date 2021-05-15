@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap'
 import '../styles/application'
 import '../packs/map'
 import './lightbox'
+import 'air-datepicker'
 import "ekko-lightbox"
 
 const images = require.context('../images', true)
