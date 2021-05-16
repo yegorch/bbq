@@ -6,7 +6,7 @@
 
 <%= t '.event' %>
 <h3><%= @event.title %></h3>
-
+<%= link_to @event.title, @event %>
 <%= t '.datetime' %>
 <h4><%= l @event.datetime %></h4>
 

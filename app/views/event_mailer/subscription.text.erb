@@ -7,5 +7,6 @@
 ----------------------
 
 <%= t 'app.event' %>: <%= @event.title %>
+<%= link_to @event.title, @event %>
 <%= t 'app.date' %>: <%= l @event.datetime %>
 <%= t 'app.author' %>: <%= @event.user.name %>

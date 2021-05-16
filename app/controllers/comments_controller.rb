@@ -27,23 +27,24 @@ class CommentsController < ApplicationController
   end
 
   private
-    def set_event
-      @event = Event.find(params[:event_id])
-    end
 
-    def set_comment
-      @comment = @event.comments.find(params[:id])
-    end
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
-    def comment_params
-      params.require(:comment).permit(:body, :user_name)
-    end
+  def set_comment
+    @comment = @event.comments.find(params[:id])
+  end
 
-    def notify_subscribers(event, comment)
-      # Собираем всех подписчиков и автора события в массив мэйлов, исключаем повторяющиеся
-      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [comment.user&.email]).uniq
-      all_emails.each do |mail|
-        EventMailer.comment(event, comment, mail).deliver_now
-      end
+  def comment_params
+    params.require(:comment).permit(:body, :user_name)
+  end
+
+  def notify_subscribers(event, comment)
+    # Собираем всех подписчиков и автора события в массив мэйлов, исключаем повторяющиеся
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [comment.user&.email]).uniq
+    all_emails.each do |mail|
+      EventMailer.comment(event, comment, mail).deliver_now
     end
+  end
 end
