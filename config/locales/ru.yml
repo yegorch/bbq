@@ -114,6 +114,7 @@ ru:
     email: 'Почта'
     event: 'Событие'
     date: 'Состоится'
+    photo_empty: 'Фотография не может быть пустой'
 
   errors:
     one: 'В вашей форме %{count} ошибка'
@@ -144,6 +145,7 @@ ru:
       event: 'Событие'
       datetime: 'Запланировано'
       owner: 'Организатор'
+      subject: "Новый комментарий в событие %{event}"
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
@@ -152,9 +154,11 @@ ru:
       event: 'Событие'
       datetime: 'Запланировано'
       owner: 'Организатор'
+      subject: "Новая подписка на событие %{event}"
     photo:
       upload: 'Загружена фотография'
       author: 'Автор'
       evenn: 'Событие'
       datetime: 'Дата и время'
+      subject: "Новая фотография в событие %{event}"
 
