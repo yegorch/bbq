@@ -5,7 +5,7 @@ lock "~> 3.16.0"
 set :application, 'deploy-bbq'
 # Это url вашего репозитория, откуда Capistrano
 # будет брать свежие версии исходников
-set :repo_url, 'git@bitbucket.org:yegorch/bbq.git'
+set :repo_url, 'git@github.com:yegorch/bbq.git'
 
 # Папка, где будет храниться приложение
 set :deploy_to, '/home/yegorch/www/deploy-bbq'
