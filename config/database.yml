@@ -22,6 +22,7 @@ test:
 
 production:
   adapter: postgresql
+  host: localhost
   user: <%= ENV['USERNAME'] %>
   password: <%= ENV['PASSWORD'] %>
   database: bbq
