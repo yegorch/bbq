@@ -8,7 +8,7 @@ set :application, 'deploy-bbq'
 set :repo_url, 'git@github.com:yegorch/bbq.git'
 
 # Папка, где будет храниться приложение
-set :deploy_to, '/home/yegorch/www/deploy-bbq'
+set :deploy_to, '/home/yegorch/www/'
 
 # Файлы, которые лежат вне репозитория
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
