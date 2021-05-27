@@ -1,8 +1,18 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+# Это имя приложения
+set :application, 'deploy-bbq'
+# Это url вашего репозитория, откуда Capistrano
+# будет брать свежие версии исходников
+set :repo_url, 'git@bitbucket.org:yegorch/bbq.git'
+
+# Папка, где будет храниться приложение
+set :deploy_to, '/home/yegorch/www/deploy-bbq'
+
+# Файлы, которые лежат вне репозитория
+append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
