@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 # Это имя приложения
-set :application, 'rails-bbq'
+set :application, 'deploy-bbq'
 # Это url вашего репозитория, откуда Capistrano
 # будет брать свежие версии исходников
 set :repo_url, 'git@github.com:yegorch/bbq.git'
