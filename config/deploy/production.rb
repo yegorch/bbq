@@ -7,10 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server 'yegordev.ru', user: 'yegorch', roles: %w[app db web resque_worker]
-
-set :resque_environment_task, true
-set :workers, { 'bbq*' => 1 }
+server 'yegordev.ru', user: 'root', roles: %w[app db web]
 
 # role-based syntax
 # ==================
