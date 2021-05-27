@@ -25,4 +25,4 @@ production:
   host: localhost
   user: <%= ENV['USERNAME'] %>
   password: <%= ENV['PASSWORD'] %>
-  database: bbq
+  database: bbq_prod
