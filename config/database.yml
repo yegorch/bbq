@@ -23,6 +23,6 @@ test:
 production:
   adapter: postgresql
   host: localhost
-  user: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
+  user: <%= Rails.application.secrets[:user] %>
+  password: <%= Rails.application.secrets[:password] %>
   database: bbq_prod
