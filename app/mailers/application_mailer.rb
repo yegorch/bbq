@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: Rails.application.credentials.mailjet[:sender]
+  default from: Rails.application.secrets[:sender]
   layout 'mailer'
 end
