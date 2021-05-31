@@ -33,6 +33,7 @@
 /config/master.key
 /config/database.yml
 /config/secrets.yml
+/config/credentials.yml
 .idea
 
 /public/packs
