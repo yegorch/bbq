@@ -1,24 +1,26 @@
-# README
+#EventsApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение "EventsApp" создает мероприятия для встреч с друзьями. Приложение написано на rails 6.1.3 и ruby 2.7.2
 
-Things you may want to cover:
+#Рабочая версия сайта
 
-* Ruby version
+http://yegordev.ru/
 
-* System dependencies
+#Настройка
 
-* Configuration
+1. Для установки зависимостей 
+```
+bundle install
+```
+2. Для установки миграций
+```
+bundle exec rails db:migrate
+```
+3. Запуск приложения
+```
+bundle exec rails s
+```
+4. В браузере перейти по адресу: http://localhost:3000/
 
-* Database creation
+# В приложении реализовано 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
