@@ -10,6 +10,11 @@ gem 'devise-i18n'
 gem 'russian'
 gem 'mailjet'
 
+gem "omniauth", "~> 1.9.1"
+gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-vkontakte'
+
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
