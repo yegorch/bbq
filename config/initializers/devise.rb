@@ -273,8 +273,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  config.omniauth :facebook, Rails.application.secrets.omniauth_facebook_id, 
-  Rails.application.secrets.omniauth_facebook_secret
+  #config.omniauth :facebook, Rails.application.secrets.omniauth[:facebook_id], 
+  #Rails.application.secrets.omniauth[:facebook_secret]
 
   config.omniauth :vkontakte, Rails.application.secrets.omniauth_vkontakte_id, 
   Rails.application.secrets.omniauth_vkontakte_secret
