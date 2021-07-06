@@ -102,6 +102,7 @@ ru:
     upload: 'Загрузить'
     add: 'Добавил'
     subscribe: 'Подписаться'
+    you_subscribe: 'Вы уже подписаны'
     i_go: 'Я пойду'
     will_go: 'Пойдут'
     caling: 'Зовет'
